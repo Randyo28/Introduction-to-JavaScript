@@ -162,10 +162,7 @@ Use the game function below to do the following:
   
   HINT: Remember that the order in which we pass in our arguments matters when it comes to parameters
 */
-
-function game(user, computer){
-  
-  computer=Math.random();
+let computer = Math.random();  
   if (computer < 0.34) {
     computer = "rock";
 } else if(computer <= 0.67 && computer > 0.34) {
@@ -173,6 +170,8 @@ function game(user, computer){
 } else {
     computer = "scissors";
 }
+
+function game(user, computer){
   
   if(user === 'paper' && computer === 'rock' || user === 'rock' && computer === 'scissors' || user === 'scissors' && computer === 'paper' ){
     return "you win!"
@@ -180,6 +179,7 @@ function game(user, computer){
   else if(user === 'paper' && computer === 'scissors' || user === 'rock' && computer === 'paper' || user === 'scissors' && computer === 'rock'){
     return "you lose!"
   }
+  
   else if(user === 'scissors' && computer === 'scissors' || user === 'paper' && computer === 'paper' || user === 'rock' && computer === 'rock'){
     return "it's a tie"
   }
@@ -283,8 +283,8 @@ Using the vowelCounter function below do the following:
 */
 
 
-function vowelCounter(/*add your code here*/) {
-    /*add your code here*/
+function vowelCounter() {
+    
 }
 
 
