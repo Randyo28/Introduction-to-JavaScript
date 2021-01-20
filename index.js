@@ -164,44 +164,27 @@ Use the game function below to do the following:
 */
 
 function game(user, computer){
-    
-  let computerChoice = null;
-      
-      if(computer >= 0 && computer <= 0.3333){
-        computerChoice = 'Rock';
-      }
-      else if(computer >= 0.3333 && computer <= 0.6666){
-        computerChoice = 'Paper';
-      }
-      else {
-        computerChoice = 'Scissors';
-      }
-
-      if(user === computerChoice){
-        return "it's a tie"
-      }
-      else if(user === 'Paper' && computerChoice === 'Rock'){
-        return "you win!"
-      }
-      else if(user === 'Paper' && computerChoice === 'Scissors'){
-        return "you lose!"
-      }
-      else if(user === 'Rock' && computerChoice === 'Scissors'){
-        return "you win!"
-      }
-      else if(user === 'Rock' && computerChoice === 'Paper'){
-        return "you lose!"
-      }
-      else if(user === 'Scissors' && computerChoice === 'Rock'){
-        return "you lose!"
-      }
-      else if(user === 'Scissors' && computerChoice === 'Paper'){
-        return "you win!"
-      }
+  
+  computer=Math.random();
+  if (computer < 0.34) {
+    computer = "rock";
+} else if(computer <= 0.67 && computer > 0.34) {
+    computer = "paper";
+} else {
+    computer = "scissors";
 }
-game('Rock', Math.random());
   
-  
+  if(user === 'paper' && computer === 'rock' || user === 'rock' && computer === 'scissors' || user === 'scissors' && computer === 'paper' ){
+    return "you win!"
+  }
+  else if(user === 'paper' && computer === 'scissors' || user === 'rock' && computer === 'paper' || user === 'scissors' && computer === 'rock'){
+    return "you lose!"
+  }
+  else if(user === 'scissors' && computer === 'scissors' || user === 'paper' && computer === 'paper' || user === 'rock' && computer === 'rock'){
+    return "it's a tie"
+  }
+}
+
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
